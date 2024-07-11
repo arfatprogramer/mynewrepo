@@ -1,10 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>first page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan</title>
+    <style>
+        .contaner {
+            height: 700px;
+            width: 700px;
+            margin: 0px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            /* background-color: blue; */
+        }
+
+        .fan {
+            /* height: 100px;
+            width: 100px; */
+            animation: tate infinite linear;
+            animation-duration: 0.4s;
+        }
+
+        @keyframes tate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .btn {
+            margin-top: 80px;
+            height: 50px;
+            width: 100px;
+            border-radius: 15%;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+        }
+        .speed{
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+        }
+        .back{
+            background-color: blue;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello GitsHub</h1>
-    <h1>bye bye</h1>
+    <div class="contaner">
+        <div class="fan" id="fan"><img src="./fanblade.jpg" alt=""></div>
+        <div class="button">
+            <button class="btn" onclick="start()">Start</button>
+            <button class="btn" onclick="stop()">Stop</button>
+            <button class="speed" onclick="speed1()">1</button>
+            <button class="speed" onclick="speed2()">2</button>
+            <button class="speed" onclick="speed3()">3</button>
+        </div>
+    </div>
 </body>
+<script>
+    function start() {
+        document.getElementById('fan').style.animationDuration = '1s';
+    }
+    function stop() {
+        document.getElementById('fan').style.animationDuration = '0s';
+    }
+    function speed1() {
+        document.getElementById('fan').style.animationDuration = '0.7s';
+    }
+    function speed2() {
+        document.getElementById('fan').style.animationDuration = '0.4s';
+    }
+    function speed3() {
+        document.getElementById('fan').style.animationDuration = '0.2s';
+    }
+    
+    // function backcolor(){
+    //     document.getElementById('speed1').style.backgroundColor:"blue";
+        
+    // }
+</script>
+
 </html>
